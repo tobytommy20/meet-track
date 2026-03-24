@@ -6,7 +6,7 @@ function AttendanceConfirm(){
 
 
   const [loading, setLoading] = useState(false)
-  const [status, setStatus] = useState<"" | "success" | "failed">("")
+  const [status, setStatus] = useState("")
 
 
     const [ searchParams ] = useSearchParams()
@@ -106,7 +106,6 @@ function AttendanceConfirm(){
             Click the button below to confirm your attendance at this meeting.
         </p>
 
-        {loading && <p> Getting your location</p>}
       <button
       className="confirm-btn"
       onClick={confirmAttendance}
