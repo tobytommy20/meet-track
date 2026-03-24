@@ -116,6 +116,7 @@ function CreateMeeting() {
 
 
       const data = await res.json()
+      console.log(data)
 
       if (!res.ok){
         const errorData = await res.json();

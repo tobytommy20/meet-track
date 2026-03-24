@@ -6,7 +6,7 @@ function AttendanceConfirm(){
 
 
   const [loading, setLoading] = useState(false)
-  const [status, setStatus] = useState<"" | "success" | "failed">("")
+  const [status, setStatus] = useState<"idle" | "success" | "failed">("idle")
 
 
     const [ searchParams ] = useSearchParams()
@@ -99,7 +99,7 @@ function AttendanceConfirm(){
 
       <h2>Meeting Attendance</h2>
 
-      {status === "" && (
+      {status === "idle" && (
        
         <>
         <p>
@@ -109,22 +109,22 @@ function AttendanceConfirm(){
       <button
       className="confirm-btn"
       onClick={confirmAttendance}
-      disabled={loading || status === "success"}
+      disabled={loading}
       >
         {loading ? "Confirming..." : "Confirm Attendance"}
       </button>
       </>
       )}
 
-      {status ==="success" && (
-        <div className ="success-msg">
+      {status === "success" && (
+        <div className= "success-msg">
          Attendance Confirmed
         </div>
       )}
 
 
-       {status ==="error" && (
-        <div className ="error-msg">
+       {status === "failed" && (
+        <div className= "error-msg">
              Attendance could not be confirmed
         </div>
       )}
