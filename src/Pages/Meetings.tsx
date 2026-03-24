@@ -2,7 +2,7 @@ import "../style/meetings.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SearchInput from "../components/SearchInput";
-import { FiMoreVertical, FiEye, FiEdit, FiTrash2, FiUpload } from "react-icons/fi";
+import { FiMoreVertical, FiEye, FiEdit, FiTrash2 } from "react-icons/fi";
 import Pagination from "../components/Pagination";
 import { useRef } from "react";
 
@@ -14,6 +14,8 @@ interface Meeting {
   audienceType: string;
   startDatetime: string;
   status: string;
+  durationMinutes?: number;
+  zoomStartUrl?: string;
 }
 
 function Meetings() {

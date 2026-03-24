@@ -28,7 +28,7 @@ function CreateMeeting() {
   const [departmentIds, setDepartmentIds] = useState<number[]>([]);
   const [departments, setDepartments] = useState<Department[]>([]);
 
-  const [staff, setStaff] = useState<Staff[]>([]);
+  const [staff, setStaff] = useState<staff[]>([]);
   const [virtualStaffIds, setVirtualStaffIds] = useState<string[]>([]);
 
   const [loading, setLoading] = useState(false);
@@ -319,7 +319,7 @@ function CreateMeeting() {
                 </button>
 
                 <button type="submit" className="primary-btn"
-                onclick={()=> navigate }
+                onClick={()=> navigate(/admin/meetings) }
                 disabled={loading}
               >
                   {loading ? "Creating..." : "Create Meeting"}

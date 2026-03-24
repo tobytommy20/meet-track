@@ -6,7 +6,7 @@ function AttendanceConfirm(){
 
 
   const [loading, setLoading] = useState(false)
-  const [status, setStatus] = useState("")
+  const [status, setStatus] = useState<"" | "success" | "failed">("")
 
 
     const [ searchParams ] = useSearchParams()
@@ -58,7 +58,8 @@ function AttendanceConfirm(){
               longitude
             })
           },
-          () => {
+
+          (error) => {
             alert("Location permission required")
             setLoading(false)
           },

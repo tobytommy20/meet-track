@@ -54,7 +54,7 @@ function Departments() {
     setViewDepartment(dept)
   };
 
-  const handleEdit = (dept:Departmnent) => {
+  const handleEdit = (dept:Department) => {
     setEditDepartment(dept)
   }
 
