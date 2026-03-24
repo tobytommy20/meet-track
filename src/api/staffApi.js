@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteStaff = exports.createStaff = exports.getStaff = void 0;
+var axios_1 = require("axios");
+var API = "/api/Staff";
+var getStaff = function () { return axios_1.default.get(API); };
+exports.getStaff = getStaff;
+var createStaff = function (data) { return axios_1.default.post(API, data); };
+exports.createStaff = createStaff;
+var deleteStaff = function (id) { return axios_1.default.delete("".concat(API, "/").concat(id)); };
+exports.deleteStaff = deleteStaff;

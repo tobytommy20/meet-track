@@ -57,16 +57,6 @@ function AttendanceConfirm(){
               latitude,
               longitude
             })
-          },
-
-          (error) => {
-            alert("Location permission required")
-            setLoading(false)
-          },
-          {
-            enableHighAccuracy: true,
-            timeout: 10000,
-            maximumAge: 0,
           }
         )
 
