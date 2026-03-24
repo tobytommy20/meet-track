@@ -6,7 +6,7 @@ function AttendanceConfirm(){
 
 
   const [loading, setLoading] = useState(false)
-  const [status, setStatus] = useState("")
+  const [status, setStatus] = useState<"" | "success" | "failed">("")
 
 
     const [ searchParams ] = useSearchParams()

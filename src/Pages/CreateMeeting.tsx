@@ -74,7 +74,8 @@ function CreateMeeting() {
           }
         );
 
-        const data = await res.json();
+        const data = await res.json()
+        console.log(data)
 
         const list = data.data || [];
 
@@ -319,7 +320,7 @@ function CreateMeeting() {
                 </button>
 
                 <button type="submit" className="primary-btn"
-                onClick={()=> navigate(/admin/meetings) }
+                onClick={()=> navigate("/admin/meetings") }
                 disabled={loading}
               >
                   {loading ? "Creating..." : "Create Meeting"}

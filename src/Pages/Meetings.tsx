@@ -14,8 +14,8 @@ interface Meeting {
   audienceType: string;
   startDatetime: string;
   status: string;
-  durationMinutes?: number;
-  zoomStartUrl?: string;
+  durationMinutes: number;
+  zoomStartUrl: string;
 }
 
 function Meetings() {
